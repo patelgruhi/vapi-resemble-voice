@@ -13,7 +13,7 @@ app.post("/voice", async (req, res) => {
       {
         method: "POST",
         headers: {
-          "Authorization": "Bearer rbl_hYxBBro0wuAVJxXOrsApDQtt",
+          "Authorization": "Bearer rbl_LFuwwOpd0erAGrT4EYZJzAtt",
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
@@ -46,3 +46,4 @@ app.post("/voice", async (req, res) => {
 app.listen(3000, () => {
   console.log("Voice server running");
 });
+
