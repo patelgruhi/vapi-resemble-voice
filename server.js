@@ -8,15 +8,15 @@ app.post("/voice", async (req, res) => {
   const text = req.body.text;
 
   const response = await fetch(
-    "https://app.resemble.ai/api/v2/projects/YOUR_PROJECT_ID/clips",
+    "https://app.resemble.ai/api/v2/projects/fb5569a1/clips",
     {
       method: "POST",
       headers: {
-        "Authorization": "Token YOUR_API_KEY",
+        "Authorization": "Token BMxfsgQ5HFWzKShaYF9CmAtt",
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        voice_uuid: "YOUR_VOICE_ID",
+        voice_uuid: "ea233ffa",
         body: text
       })
     }
@@ -28,5 +28,6 @@ app.post("/voice", async (req, res) => {
     audio: data.item.audio_src
   });
 });
+
 
 app.listen(3000, () => console.log("Voice server running"));
