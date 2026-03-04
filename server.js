@@ -22,12 +22,14 @@ app.post("/voice", async (req, res) => {
     }
   );
 
-  const data = await response.json();
+ const data = await response.json();
 
-  res.json({
-    audio: data.item.audio_src
-  });
-});
+console.log(data);
+
+res.json({
+  audio: data.audio_src || data.item?.audio_src
+});;
 
 
 app.listen(3000, () => console.log("Voice server running"));
+
